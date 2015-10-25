@@ -1,4 +1,5 @@
 var React = require('react-native');
+var Profile = require('./Profile');
 
 var {
   Text,
@@ -30,6 +31,11 @@ class Dashboard extends React.Component{
 
   goToProfile(){
     console.log('profiles');
+    this.props.navigator.push({
+        title: "Profile",
+        component: Profile,
+        passProps: {userInfo: this.props.userInfo}
+    });
   }
   goToRepos(){
     console.log('repos');
