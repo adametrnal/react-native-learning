@@ -79,6 +79,7 @@ class Main extends React.Component{
           <ActivityIndicatorIOS
             animating={this.state.isLoading}
             color="#111"
+            style={styles.loader}
             size="large"></ActivityIndicatorIOS>
           {showErr}
       </View>
@@ -128,6 +129,9 @@ var styles = StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'center'
   },
+  loader: {
+    alignSelf: 'center'
+  }
 });
 
 
